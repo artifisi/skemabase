@@ -80,6 +80,11 @@ See `examples/` directory for sample schemas and generated outputs.
 Follow code style in `CONTRIBUTING.md`.  
 Submit pull requests against `main` branch.
 
+## Roadmap
+Please start a new branch for each phase or feature (e.g., `phase-2/schema-parser`) before beginning work.  
+Future work and detailed phase-by-phase tasks are tracked in `todo.md`.  
+Refer to `todo.md` for the current status of Phase 2 and beyond.
+
 ## License
 MIT License.  
 See `LICENSE` for details.

@@ -12,12 +12,12 @@ ORM migrations, and diagrams.
 - [x] Monitor code coverage and enforce thresholds
 
 ## Phase 2: Core Parsing & IR
-- [ ] Formalize grammar (BNF) for schema statements
-- [ ] Implement lexer/tokenizer
-- [ ] Build parser to emit an AST from tokens
-- [ ] Define JSON Intermediate Representation (IR) schema
-- [ ] Serialize AST to JSON IR and back
-- [ ] Write unit tests for parsing and IR generation
+- [x] Formalize grammar (BNF) for schema statements
+- [x] Implement lexer/tokenizer
+- [x] Build parser to emit an AST from tokens
+- [x] Define JSON Intermediate Representation (IR) schema
+- [x] Serialize AST to JSON IR and back
+- [x] Write unit tests for parsing and IR generation
 
 ## Phase 3: SQL Generation (MVP)
 - [ ] Design mapping from IR to SQL DDL constructs
