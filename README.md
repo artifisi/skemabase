@@ -1,1 +1,92 @@
+```markdown
 # skemabase
+
+## Description
+Define database schemas using plain English.  
+Parse skemabase into JSON IR, SQL DDL, ORM migrations, and diagrams.
+
+## Features
+- Plain-English schema statements  
+- Entities, attributes, relationships, constraints  
+- Optional type annotations, nullability, defaults, unique keys  
+- One-to-one, one-to-many, many-to-many relationships  
+- JSON intermediate representation  
+- SQL DDL generation for PostgreSQL, MySQL, SQLite  
+- ORM migration templates (Rails, Django, SQLAlchemy)  
+- Graphviz DOT diagram output  
+- CLI, JavaScript and Python SDKs  
+
+## Syntax
+```
+<Entity> has attributes: <name>[:<type>] [unique] [not null] [default <expr>], …
+<Entity> has many <Target>
+<Entity> has one <Target>
+<Entity> belongs to <Target>
+<Entity> has and belongs to many <Target>
+```
+
+### BNF Grammar
+```
+<Schema>       ::= <Statement>*
+<Statement>    ::= <EntityDecl> | <AttrDecl> | <RelDecl>
+<EntityDecl>   ::= <Identifier>
+<AttrDecl>     ::= <Identifier> "has attributes:" <AttrList>
+<AttrList>     ::= <Attr> ("," <Attr>)*
+<Attr>         ::= <Name> [":" <Type>] ["unique"] ["not null"] ["default" <Expr>]
+<RelDecl>      ::= <Identifier> <RelType> <IdentifierList>
+<RelType>      ::= "has many" | "has one" | "belongs to" | "has and belongs to many"
+<IdentifierList> ::= <Identifier> ("," <Identifier>)*
+```
+
+## Installation
+
+### CLI
+```bash
+npm install -g skemabase-cli
+```
+
+### JavaScript SDK
+```bash
+npm install skemabase-js
+```
+
+### Python SDK
+```bash
+pip install skemabase-py
+```
+
+## Quickstart
+
+### Parse CLI
+```bash
+skemabase parse schema.sb --output schema.json
+```
+
+### Generate SQL
+```bash
+skemabase generate sql schema.sb --dialect postgresql --output schema.sql
+```
+
+### Use JavaScript
+```js
+import { parse, generateSQL } from 'skemabase-js';
+
+const text = `User has attributes: username, email unique
+User has many posts`;
+const ir = parse(text);
+const sql = generateSQL(ir, { dialect: 'postgresql' });
+console.log(sql);
+```
+
+## Examples
+See `examples/` directory for sample schemas and generated outputs.
+
+## Contributing
+Follow code style in `CONTRIBUTING.md`.  
+Submit pull requests against `main` branch.
+
+## License
+MIT License.  
+See `LICENSE` for details.
+```
+
