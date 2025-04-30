@@ -6,8 +6,8 @@ ORM migrations, and diagrams.
 
 ---
 ## Phase 1: Testing & CI/CD
-- [ ] Set up Jest/Mocha (JS) and pytest (Python)
-- [ ] Add linting and formatting (ESLint, Prettier, Black)
+- [ ] Set up Jest (JS)
+- [ ] Add linting and formatting (ESLint, Prettier)
 - [ ] Configure GitHub Actions for build, test, and publish workflows
 - [ ] Monitor code coverage and enforce thresholds
 
@@ -53,11 +53,6 @@ ORM migrations, and diagrams.
 - [ ] Write usage examples and tests
 - [ ] Publish to npm
 
-### Python SDK
-- [ ] Initialize `skemabase-py` package
-- [ ] Expose `parse()`, `generate_sql()`, `generate_orm()`, `generate_diagram()` APIs
-- [ ] Write usage examples and tests
-- [ ] Publish to PyPI
 
 ## Phase 8: Diagram Generation
 - [ ] Implement IR-to-Graphviz DOT generator

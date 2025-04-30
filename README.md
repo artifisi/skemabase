@@ -13,7 +13,7 @@ Parse skemabase into JSON IR, SQL DDL, ORM migrations, and diagrams.
 - SQL DDL generation for PostgreSQL, MySQL, SQLite  
 - ORM migration templates (Rails, Django, SQLAlchemy)  
 - Graphviz DOT diagram output  
-- CLI, JavaScript and Python SDKs  
+- CLI and JavaScript SDKs  
 
 ## Syntax
 ```
@@ -49,10 +49,6 @@ npm install -g skemabase-cli
 npm install skemabase-js
 ```
 
-### Python SDK
-```bash
-pip install skemabase-py
-```
 
 ## Quickstart
 
