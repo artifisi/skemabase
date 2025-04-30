@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  js:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: skemabase-js
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - run: npm install
+      - run: npm test
+      - run: npm run lint
+
+  python:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: skemabase-py
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - run: pip install --upgrade pip
+      - run: pip install -r requirements-dev.txt
+      - run: pip install -e .
+      - run: pytest --maxfail=1 --disable-warnings -q
+      - run: black --check src tests
+      - run: flake8 src tests
