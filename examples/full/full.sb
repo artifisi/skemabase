@@ -1,0 +1,21 @@
+User has attributes: username, email unique, created_at default now()
+User has many posts
+User has and belongs to many roles
+
+Post has attributes: title not null, body, published_at, status default 'draft'
+Post belongs to User
+Post has many comments
+Post has and belongs to many tags
+
+Comment has attributes: content, created_at default now()
+Comment belongs to Post
+Comment belongs to User
+
+Tag has attributes: name unique
+Tag has and belongs to many posts
+
+Role has attributes: name
+Role has and belongs to many users
+
+AuditLog has attributes: change, changed_at default now()
+AuditLog belongs to User

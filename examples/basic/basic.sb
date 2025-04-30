@@ -1,0 +1,5 @@
+User has attributes: username, email unique
+User has many posts
+
+Post has attributes: title:string not null, body, published_at:datetime
+Post belongs to User

@@ -1,0 +1,24 @@
+[
+    {
+      "entity": "User",
+      "attributes": [
+        {"name": "username",   "type": null, "unique": false, "nullable": true, "default": null},
+        {"name": "email",      "type": null, "unique": true,  "nullable": true, "default": null}
+      ],
+      "relationships": [
+        {"type": "has_many", "target": "Post"}
+      ]
+    },
+    {
+      "entity": "Post",
+      "attributes": [
+        {"name": "title",         "type": "string",   "unique": false, "nullable": false, "default": null},
+        {"name": "body",          "type": null,       "unique": false, "nullable": true,  "default": null},
+        {"name": "published_at",  "type": "datetime", "unique": false, "nullable": true,  "default": null}
+      ],
+      "relationships": [
+        {"type": "belongs_to", "target": "User"}
+      ]
+    }
+  ]
+  
