@@ -1,0 +1,59 @@
+SkemaBase Project Instructions
+
+Description:
+- Define database schemas using plain English.
+- Generate JSON IR, SQL DDL (PostgreSQL, MySQL, SQLite), ORM migrations, and ER diagrams.
+
+Syntax:
+  <Entity> has attributes: <name>[:<type>] [unique] [not null] [default <expr>], …
+  <Entity> has many <Target>
+  <Entity> has one <Target>
+  <Entity> belongs to <Target>
+  <Entity> has and belongs to many <Target>
+
+BNF Grammar:
+```
+<Schema>       ::= <Statement>*
+<Statement>    ::= <EntityDecl> | <AttrDecl> | <RelDecl>
+<EntityDecl>   ::= <Identifier>
+<AttrDecl>     ::= <Identifier> "has attributes:" <AttrList>
+<AttrList>     ::= <Attr> ("," <Attr>)*
+<Attr>         ::= <Name> [":" <Type>] ["unique"] ["not null"] ["default" <Expr>]
+<RelDecl>      ::= <Identifier> <RelType> <IdentifierList>
+<RelType>      ::= "has many" | "has one" | "belongs to" | "has and belongs to many"
+<IdentifierList> ::= <Identifier> ("," <Identifier>)*
+```
+
+Project Structure:
+- examples/     Sample schemas (.sb), IR (.ir.json), and SQL (.sql).
+- skemabase-js/ JavaScript SDK
+  - src/tokenizer.js   Lexical analysis
+  - src/parser.js      AST generation
+  - src/astToIR.js     IR conversion
+  - tests/             Unit tests (Jest)
+- todo.md        Phase-by-phase roadmap
+- README.md      Usage, quickstart, and developer docs
+
+Development Commands:
+- cd skemabase-js && npm install && npm test   Run SDK tests
+- skemabase parse <file.sb> --output <file.json>
+- skemabase generate sql <file.sb> --dialect postgresql --output <file.sql>
+
+Coding Guidelines:
+- Fix issues at the root cause; avoid quick patches.
+- Keep changes minimal and focused on the user’s request.
+- Update documentation (README.md, todo.md) as needed.
+- Use `apply_patch` for file edits and ensure pre-commit checks pass.
+- Run existing tests; add new tests for new functionality.
+
+Roadmap Phases (see todo.md):
+- Phase 1: Testing & CI/CD (complete)
+- Phase 2: Core Parsing & IR (complete)
+- Phase 3: SQL Generation (MVP)
+  - Design mapping IR → SQL DDL constructs
+  - Implement SQL generator for PostgreSQL (red–green development)
+  - Add support for SQLite
+  - Create SQL generator tests (IR → SQL → IR)
+  - Integrate `generate sql` command in CLI and expose `generateSQL` in the SDK
+- Phase 4: Relationships & Constraints
+- Phase 5+: ORM templates, CLI polish, diagram generation, documentation
