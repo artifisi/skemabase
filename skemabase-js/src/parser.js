@@ -70,7 +70,14 @@ function parseTokensToAST(tokens) {
     relType = 'belongs_to';
     idx = 3;
   } else {
-    throw new Error(`Unrecognized statement: ${tokens.join(' ')}`);
+    // Provide detailed guidance on expected syntax
+    const text = tokens.join(' ');
+    throw new Error(
+      `Unrecognized statement: "${text}". ` +
+      `Expected: "<Entity> has attributes: ...", ` +
+      `"<Entity> has one/many or belongs to ...", or ` +
+      `"<Entity> has and belongs to many ...".`
+    );
   }
   const rawTargets = tokens.slice(idx);
   const targets = rawTargets.filter(t => t !== ',').map(normalizeEntityName);

@@ -6,13 +6,20 @@ const { astToIR } = require('./astToIR');
 function parse(text) {
   const lines = text.split(/\r?\n/);
   const statements = [];
-  for (const raw of lines) {
+  lines.forEach((raw, idx) => {
     const line = raw.trim();
-    if (!line) continue;
+    if (!line) return;
     const tokens = tokenize(line);
-    const stmt = parseTokensToAST(tokens);
+    let stmt;
+    try {
+      stmt = parseTokensToAST(tokens);
+    } catch (err) {
+      throw new Error(
+        `Error parsing line ${idx + 1}: "${line}" -> ${err.message}`
+      );
+    }
     statements.push(stmt);
-  }
+  });
   return astToIR(statements);
 }
 

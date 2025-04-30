@@ -85,6 +85,14 @@ Please start a new branch for each phase or feature (e.g., `phase-2/schema-parse
 Future work and detailed phase-by-phase tasks are tracked in `todo.md`.  
 Refer to `todo.md` for the current status of Phase 2 and beyond.
 
+## Developer Documentation
+### Parsing Pipeline
+1. Tokenization (src/tokenizer.js): splits each non-empty line into tokens (words, punctuation, literals).
+2. AST Generation (src/parser.js): transforms token arrays into AST statements (AttrDecl, RelDecl), with detailed syntax error reporting.
+3. IR Conversion (src/astToIR.js): aggregates AST statements into the JSON Intermediate Representation (IR) used by downstream SQL/ORM generators.
+
+For large schemas, consider tuning or streaming parsing and optimizing the IR converter to minimize memory churn and lookups.
+
 ## License
 MIT License.  
 See `LICENSE` for details.
