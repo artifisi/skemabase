@@ -8,8 +8,8 @@ ORM migrations, and diagrams.
 ## Phase 1: Testing & CI/CD
 - [x] Set up Jest (JS)
 - [x] Add linting and formatting (ESLint, Prettier)
-- [ ] Configure GitHub Actions for build, test, and publish workflows
-- [ ] Monitor code coverage and enforce thresholds
+- [x] Configure GitHub Actions for build, test, and publish workflows
+- [x] Monitor code coverage and enforce thresholds
 
 ## Phase 2: Core Parsing & IR
 - [ ] Formalize grammar (BNF) for schema statements
