@@ -45,6 +45,9 @@ Coding Guidelines:
 - Update documentation (README.md, todo.md) as needed.
 - Use `apply_patch` for file edits and ensure pre-commit checks pass.
 - Run existing tests; add new tests for new functionality.
+- Always create a new branch for each phase before starting work.
+- Follow red–green development: write failing tests first, then implementation until tests pass.
+- After completing a feature or phase, update todo.md to reflect its new status.
 
 Roadmap Phases (see todo.md):
 - Phase 1: Testing & CI/CD (complete)
