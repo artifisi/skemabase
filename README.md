@@ -1,4 +1,3 @@
-```markdown
 # skemabase
 
 ## Description
@@ -15,7 +14,6 @@ Parse skemabase into JSON IR, SQL DDL, ORM migrations, and diagrams.
 - ORM migration templates (Rails, Django, SQLAlchemy)  
 - Graphviz DOT diagram output  
 - CLI, JavaScript and Python SDKs  
-```
 
 ## Syntax
 ```
