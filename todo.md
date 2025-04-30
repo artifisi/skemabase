@@ -6,8 +6,8 @@ ORM migrations, and diagrams.
 
 ---
 ## Phase 1: Testing & CI/CD
-- [ ] Set up Jest (JS)
-- [ ] Add linting and formatting (ESLint, Prettier)
+- [x] Set up Jest (JS)
+- [x] Add linting and formatting (ESLint, Prettier)
 - [ ] Configure GitHub Actions for build, test, and publish workflows
 - [ ] Monitor code coverage and enforce thresholds
 
