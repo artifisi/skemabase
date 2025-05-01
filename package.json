@@ -1,0 +1,10 @@
+{
+  "name": "skemabase-cli",
+  "version": "0.1.0",
+  "bin": {
+    "skemabase": "./bin/cli.js"
+  },
+  "dependencies": {
+    "skemabase-js": "file:./skemabase-js"
+  }
+}

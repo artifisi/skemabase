@@ -1,8 +1,14 @@
 const { tokenize } = require('./tokenizer');
 const { parseTokensToAST } = require('./parser');
 const { astToIR } = require('./astToIR');
+const { generateSQL } = require('./sql');
 
-// Parse a schema text into the JSON intermediate representation (IR)
+/**
+ * Parse a SkemaBase schema (plain English) into JSON IR.
+ * @param {string} text - Schema text, one statement per line.
+ * @returns {Array<Object>} IR: array of entities with attributes and relationships.
+ * @throws {Error} If any statement fails to parse.
+ */
 function parse(text) {
   const lines = text.split(/\r?\n/);
   const statements = [];
@@ -23,4 +29,4 @@ function parse(text) {
   return astToIR(statements);
 }
 
-module.exports = { parse };
+module.exports = { parse, generateSQL };
