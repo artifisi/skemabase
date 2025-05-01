@@ -38,7 +38,7 @@ ORM migrations, and diagrams.
 - [x] Implement `skemabase parse <file> --output <json>`
 - [x] Implement `skemabase generate sql <file> --dialect <dialect> --output <sql>`
 - [x] Add help (`--help`, `-h`) and version (`--version`, `-v`) flags
-- [ ] Improve error handling (exit codes, messages)
+- [x] Improve error handling (exit codes, messages)
 - [ ] Publish CLI to npm
 
 ## Phase 6: SDKs & Language Bindings
