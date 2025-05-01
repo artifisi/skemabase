@@ -41,10 +41,10 @@ ORM migrations, and diagrams.
 - [x] Improve error handling (exit codes, messages)
 
 ## Phase 6: Examples, Docs & Tutorials
-- [ ] Populate `examples/` with schema files and generated artifacts
-- [ ] Update README with quickstart and detailed usage
-- [ ] Write comprehensive documentation (user guide, API reference)
-- [ ] Create CONTRIBUTING.md and style guide
+- [x] Populate `examples/` with schema files and generated artifacts
+- [x] Update README with quickstart and detailed usage
+- [x] Write comprehensive documentation (user guide, API reference)
+- [x] Create CONTRIBUTING.md and style guide
 
 ## Phase 7: Releases & Maintenance
 - [ ] Adopt semantic versioning (SemVer)
