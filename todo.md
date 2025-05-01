@@ -32,12 +32,6 @@ ORM migrations, and diagrams.
 - [x] Support unique, not null, default value annotations
 - [x] Write integration tests for relational scenarios
 
-## Phase 5: ORM Migration Templates
-- [ ] Rails ActiveRecord migration template
-- [ ] Django migrations template
-- [ ] SQLAlchemy/Alembic migration template
-- [ ] Sample migration outputs in `examples/`
-- [ ] Tests for ORM template correctness
 
 ## Phase 6: Command-Line Interface
 - [ ] Scaffold CLI package (Node.js)
