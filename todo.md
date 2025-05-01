@@ -24,7 +24,7 @@ ORM migrations, and diagrams.
 - [ ] Implement SQL generator for PostgreSQL
 - [ ] Add support for SQLite
 - [ ] Create SQL generator tests (round-trip IR → SQL → IR)
-- [ ] Integrate `generate sql` command in CLI
+- [x] Integrate `generate sql` command in CLI
 
 ## Phase 4: Relationships & Constraints
 - [ ] Extend IR to represent relationships (1:1, 1:N, N:M)

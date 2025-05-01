@@ -1,6 +1,7 @@
 const { tokenize } = require('./tokenizer');
 const { parseTokensToAST } = require('./parser');
 const { astToIR } = require('./astToIR');
+const { generateSQL } = require('./sql');
 
 // Parse a schema text into the JSON intermediate representation (IR)
 function parse(text) {
@@ -23,4 +24,4 @@ function parse(text) {
   return astToIR(statements);
 }
 
-module.exports = { parse };
+module.exports = { parse, generateSQL };
