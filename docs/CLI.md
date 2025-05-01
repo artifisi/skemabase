@@ -65,3 +65,7 @@ Supports relationships defined in the schema (has_many, has_one, belongs_to, has
 | `skemabase generate sql my.sb -d sqlite`       | Generate SQLite DDL                 |
 | `skemabase --version`                          | Show CLI version                    |
 | `skemabase --help`                             | Show usage                          |
+
+## Full Examples
+
+For detailed schema examples and generated outputs, see [Examples](Examples.md).
