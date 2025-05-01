@@ -1,0 +1,100 @@
+Entity01 has attributes: attr1_01:integer not null, attr2_01:text default 'def01'
+Entity01 has many Entity02
+Entity02 has attributes: attr1_02:integer not null, attr2_02:text default 'def02'
+Entity02 has many Entity03
+Entity03 has attributes: attr1_03:integer not null, attr2_03:text default 'def03'
+Entity03 has many Entity04
+Entity04 has attributes: attr1_04:integer not null, attr2_04:text default 'def04'
+Entity04 has many Entity05
+Entity05 has attributes: attr1_05:integer not null, attr2_05:text default 'def05'
+Entity05 has many Entity06
+Entity06 has attributes: attr1_06:integer not null, attr2_06:text default 'def06'
+Entity06 has many Entity07
+Entity07 has attributes: attr1_07:integer not null, attr2_07:text default 'def07'
+Entity07 has many Entity08
+Entity08 has attributes: attr1_08:integer not null, attr2_08:text default 'def08'
+Entity08 has many Entity09
+Entity09 has attributes: attr1_09:integer not null, attr2_09:text default 'def09'
+Entity09 has many Entity10
+Entity10 has attributes: attr1_10:integer not null, attr2_10:text default 'def10'
+Entity10 has many Entity11
+Entity11 has attributes: attr1_11:integer not null, attr2_11:text default 'def11'
+Entity11 has many Entity12
+Entity12 has attributes: attr1_12:integer not null, attr2_12:text default 'def12'
+Entity12 has many Entity13
+Entity13 has attributes: attr1_13:integer not null, attr2_13:text default 'def13'
+Entity13 has many Entity14
+Entity14 has attributes: attr1_14:integer not null, attr2_14:text default 'def14'
+Entity14 has many Entity15
+Entity15 has attributes: attr1_15:integer not null, attr2_15:text default 'def15'
+Entity15 has many Entity16
+Entity16 has attributes: attr1_16:integer not null, attr2_16:text default 'def16'
+Entity16 has many Entity17
+Entity17 has attributes: attr1_17:integer not null, attr2_17:text default 'def17'
+Entity17 has many Entity18
+Entity18 has attributes: attr1_18:integer not null, attr2_18:text default 'def18'
+Entity18 has many Entity19
+Entity19 has attributes: attr1_19:integer not null, attr2_19:text default 'def19'
+Entity19 has many Entity20
+Entity20 has attributes: attr1_20:integer not null, attr2_20:text default 'def20'
+Entity20 has many Entity21
+Entity21 has attributes: attr1_21:integer not null, attr2_21:text default 'def21'
+Entity21 has many Entity22
+Entity22 has attributes: attr1_22:integer not null, attr2_22:text default 'def22'
+Entity22 has many Entity23
+Entity23 has attributes: attr1_23:integer not null, attr2_23:text default 'def23'
+Entity23 has many Entity24
+Entity24 has attributes: attr1_24:integer not null, attr2_24:text default 'def24'
+Entity24 has many Entity25
+Entity25 has attributes: attr1_25:integer not null, attr2_25:text default 'def25'
+Entity25 has many Entity26
+Entity26 has attributes: attr1_26:integer not null, attr2_26:text default 'def26'
+Entity26 has many Entity27
+Entity27 has attributes: attr1_27:integer not null, attr2_27:text default 'def27'
+Entity27 has many Entity28
+Entity28 has attributes: attr1_28:integer not null, attr2_28:text default 'def28'
+Entity28 has many Entity29
+Entity29 has attributes: attr1_29:integer not null, attr2_29:text default 'def29'
+Entity29 has many Entity30
+Entity30 has attributes: attr1_30:integer not null, attr2_30:text default 'def30'
+Entity30 has many Entity31
+Entity31 has attributes: attr1_31:integer not null, attr2_31:text default 'def31'
+Entity31 has many Entity32
+Entity32 has attributes: attr1_32:integer not null, attr2_32:text default 'def32'
+Entity32 has many Entity33
+Entity33 has attributes: attr1_33:integer not null, attr2_33:text default 'def33'
+Entity33 has many Entity34
+Entity34 has attributes: attr1_34:integer not null, attr2_34:text default 'def34'
+Entity34 has many Entity35
+Entity35 has attributes: attr1_35:integer not null, attr2_35:text default 'def35'
+Entity35 has many Entity36
+Entity36 has attributes: attr1_36:integer not null, attr2_36:text default 'def36'
+Entity36 has many Entity37
+Entity37 has attributes: attr1_37:integer not null, attr2_37:text default 'def37'
+Entity37 has many Entity38
+Entity38 has attributes: attr1_38:integer not null, attr2_38:text default 'def38'
+Entity38 has many Entity39
+Entity39 has attributes: attr1_39:integer not null, attr2_39:text default 'def39'
+Entity39 has many Entity40
+Entity40 has attributes: attr1_40:integer not null, attr2_40:text default 'def40'
+Entity40 has many Entity41
+Entity41 has attributes: attr1_41:integer not null, attr2_41:text default 'def41'
+Entity41 has many Entity42
+Entity42 has attributes: attr1_42:integer not null, attr2_42:text default 'def42'
+Entity42 has many Entity43
+Entity43 has attributes: attr1_43:integer not null, attr2_43:text default 'def43'
+Entity43 has many Entity44
+Entity44 has attributes: attr1_44:integer not null, attr2_44:text default 'def44'
+Entity44 has many Entity45
+Entity45 has attributes: attr1_45:integer not null, attr2_45:text default 'def45'
+Entity45 has many Entity46
+Entity46 has attributes: attr1_46:integer not null, attr2_46:text default 'def46'
+Entity46 has many Entity47
+Entity47 has attributes: attr1_47:integer not null, attr2_47:text default 'def47'
+Entity47 has many Entity48
+Entity48 has attributes: attr1_48:integer not null, attr2_48:text default 'def48'
+Entity48 has many Entity49
+Entity49 has attributes: attr1_49:integer not null, attr2_49:text default 'def49'
+Entity49 has many Entity50
+Entity50 has attributes: attr1_50:integer not null, attr2_50:text default 'def50'
+Entity50 has many Entity51

@@ -1,0 +1,154 @@
+[
+  {
+    "entity": "User",
+    "attributes": [
+      {
+        "name": "name",
+        "type": null,
+        "unique": false,
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "email",
+        "type": null,
+        "unique": true,
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "joined_at",
+        "type": "timestamp",
+        "unique": false,
+        "nullable": true,
+        "default": "now()"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_one",
+        "target": "Profile"
+      },
+      {
+        "type": "habtm",
+        "target": "Group"
+      }
+    ]
+  },
+  {
+    "entity": "Profile",
+    "attributes": [
+      {
+        "name": "bio",
+        "type": null,
+        "unique": false,
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "avatar_url",
+        "type": null,
+        "unique": false,
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "relationships": []
+  },
+  {
+    "entity": "Group",
+    "attributes": [
+      {
+        "name": "name",
+        "type": null,
+        "unique": true,
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp",
+        "unique": false,
+        "nullable": true,
+        "default": "now()"
+      }
+    ],
+    "relationships": []
+  },
+  {
+    "entity": "Post",
+    "attributes": [
+      {
+        "name": "content",
+        "type": null,
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "posted_at",
+        "type": "timestamp",
+        "unique": false,
+        "nullable": true,
+        "default": "now()"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "belongs_to",
+        "target": "User"
+      }
+    ]
+  },
+  {
+    "entity": "Comment",
+    "attributes": [
+      {
+        "name": "body",
+        "type": null,
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "commented_at",
+        "type": "timestamp",
+        "unique": false,
+        "nullable": true,
+        "default": "now()"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "belongs_to",
+        "target": "User"
+      },
+      {
+        "type": "belongs_to",
+        "target": "Post"
+      }
+    ]
+  },
+  {
+    "entity": "Like",
+    "attributes": [
+      {
+        "name": "liked_at",
+        "type": "timestamp",
+        "unique": false,
+        "nullable": true,
+        "default": "now()"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "belongs_to",
+        "target": "User"
+      },
+      {
+        "type": "belongs_to",
+        "target": "Post"
+      }
+    ]
+  }
+]

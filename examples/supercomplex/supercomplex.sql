@@ -1,0 +1,353 @@
+CREATE TABLE entity01 (
+  id SERIAL PRIMARY KEY,
+  attr1_01 INTEGER NOT NULL,
+  attr2_01 TEXT DEFAULT 'def01'
+);
+
+CREATE TABLE entity02 (
+  id SERIAL PRIMARY KEY,
+  attr1_02 INTEGER NOT NULL,
+  attr2_02 TEXT DEFAULT 'def02',
+  entity01_id INTEGER REFERENCES entity01(id)
+);
+
+CREATE TABLE entity03 (
+  id SERIAL PRIMARY KEY,
+  attr1_03 INTEGER NOT NULL,
+  attr2_03 TEXT DEFAULT 'def03',
+  entity02_id INTEGER REFERENCES entity02(id)
+);
+
+CREATE TABLE entity04 (
+  id SERIAL PRIMARY KEY,
+  attr1_04 INTEGER NOT NULL,
+  attr2_04 TEXT DEFAULT 'def04',
+  entity03_id INTEGER REFERENCES entity03(id)
+);
+
+CREATE TABLE entity05 (
+  id SERIAL PRIMARY KEY,
+  attr1_05 INTEGER NOT NULL,
+  attr2_05 TEXT DEFAULT 'def05',
+  entity04_id INTEGER REFERENCES entity04(id)
+);
+
+CREATE TABLE entity06 (
+  id SERIAL PRIMARY KEY,
+  attr1_06 INTEGER NOT NULL,
+  attr2_06 TEXT DEFAULT 'def06',
+  entity05_id INTEGER REFERENCES entity05(id)
+);
+
+CREATE TABLE entity07 (
+  id SERIAL PRIMARY KEY,
+  attr1_07 INTEGER NOT NULL,
+  attr2_07 TEXT DEFAULT 'def07',
+  entity06_id INTEGER REFERENCES entity06(id)
+);
+
+CREATE TABLE entity08 (
+  id SERIAL PRIMARY KEY,
+  attr1_08 INTEGER NOT NULL,
+  attr2_08 TEXT DEFAULT 'def08',
+  entity07_id INTEGER REFERENCES entity07(id)
+);
+
+CREATE TABLE entity09 (
+  id SERIAL PRIMARY KEY,
+  attr1_09 INTEGER NOT NULL,
+  attr2_09 TEXT DEFAULT 'def09',
+  entity08_id INTEGER REFERENCES entity08(id)
+);
+
+CREATE TABLE entity10 (
+  id SERIAL PRIMARY KEY,
+  attr1_10 INTEGER NOT NULL,
+  attr2_10 TEXT DEFAULT 'def10',
+  entity09_id INTEGER REFERENCES entity09(id)
+);
+
+CREATE TABLE entity11 (
+  id SERIAL PRIMARY KEY,
+  attr1_11 INTEGER NOT NULL,
+  attr2_11 TEXT DEFAULT 'def11',
+  entity10_id INTEGER REFERENCES entity10(id)
+);
+
+CREATE TABLE entity12 (
+  id SERIAL PRIMARY KEY,
+  attr1_12 INTEGER NOT NULL,
+  attr2_12 TEXT DEFAULT 'def12',
+  entity11_id INTEGER REFERENCES entity11(id)
+);
+
+CREATE TABLE entity13 (
+  id SERIAL PRIMARY KEY,
+  attr1_13 INTEGER NOT NULL,
+  attr2_13 TEXT DEFAULT 'def13',
+  entity12_id INTEGER REFERENCES entity12(id)
+);
+
+CREATE TABLE entity14 (
+  id SERIAL PRIMARY KEY,
+  attr1_14 INTEGER NOT NULL,
+  attr2_14 TEXT DEFAULT 'def14',
+  entity13_id INTEGER REFERENCES entity13(id)
+);
+
+CREATE TABLE entity15 (
+  id SERIAL PRIMARY KEY,
+  attr1_15 INTEGER NOT NULL,
+  attr2_15 TEXT DEFAULT 'def15',
+  entity14_id INTEGER REFERENCES entity14(id)
+);
+
+CREATE TABLE entity16 (
+  id SERIAL PRIMARY KEY,
+  attr1_16 INTEGER NOT NULL,
+  attr2_16 TEXT DEFAULT 'def16',
+  entity15_id INTEGER REFERENCES entity15(id)
+);
+
+CREATE TABLE entity17 (
+  id SERIAL PRIMARY KEY,
+  attr1_17 INTEGER NOT NULL,
+  attr2_17 TEXT DEFAULT 'def17',
+  entity16_id INTEGER REFERENCES entity16(id)
+);
+
+CREATE TABLE entity18 (
+  id SERIAL PRIMARY KEY,
+  attr1_18 INTEGER NOT NULL,
+  attr2_18 TEXT DEFAULT 'def18',
+  entity17_id INTEGER REFERENCES entity17(id)
+);
+
+CREATE TABLE entity19 (
+  id SERIAL PRIMARY KEY,
+  attr1_19 INTEGER NOT NULL,
+  attr2_19 TEXT DEFAULT 'def19',
+  entity18_id INTEGER REFERENCES entity18(id)
+);
+
+CREATE TABLE entity20 (
+  id SERIAL PRIMARY KEY,
+  attr1_20 INTEGER NOT NULL,
+  attr2_20 TEXT DEFAULT 'def20',
+  entity19_id INTEGER REFERENCES entity19(id)
+);
+
+CREATE TABLE entity21 (
+  id SERIAL PRIMARY KEY,
+  attr1_21 INTEGER NOT NULL,
+  attr2_21 TEXT DEFAULT 'def21',
+  entity20_id INTEGER REFERENCES entity20(id)
+);
+
+CREATE TABLE entity22 (
+  id SERIAL PRIMARY KEY,
+  attr1_22 INTEGER NOT NULL,
+  attr2_22 TEXT DEFAULT 'def22',
+  entity21_id INTEGER REFERENCES entity21(id)
+);
+
+CREATE TABLE entity23 (
+  id SERIAL PRIMARY KEY,
+  attr1_23 INTEGER NOT NULL,
+  attr2_23 TEXT DEFAULT 'def23',
+  entity22_id INTEGER REFERENCES entity22(id)
+);
+
+CREATE TABLE entity24 (
+  id SERIAL PRIMARY KEY,
+  attr1_24 INTEGER NOT NULL,
+  attr2_24 TEXT DEFAULT 'def24',
+  entity23_id INTEGER REFERENCES entity23(id)
+);
+
+CREATE TABLE entity25 (
+  id SERIAL PRIMARY KEY,
+  attr1_25 INTEGER NOT NULL,
+  attr2_25 TEXT DEFAULT 'def25',
+  entity24_id INTEGER REFERENCES entity24(id)
+);
+
+CREATE TABLE entity26 (
+  id SERIAL PRIMARY KEY,
+  attr1_26 INTEGER NOT NULL,
+  attr2_26 TEXT DEFAULT 'def26',
+  entity25_id INTEGER REFERENCES entity25(id)
+);
+
+CREATE TABLE entity27 (
+  id SERIAL PRIMARY KEY,
+  attr1_27 INTEGER NOT NULL,
+  attr2_27 TEXT DEFAULT 'def27',
+  entity26_id INTEGER REFERENCES entity26(id)
+);
+
+CREATE TABLE entity28 (
+  id SERIAL PRIMARY KEY,
+  attr1_28 INTEGER NOT NULL,
+  attr2_28 TEXT DEFAULT 'def28',
+  entity27_id INTEGER REFERENCES entity27(id)
+);
+
+CREATE TABLE entity29 (
+  id SERIAL PRIMARY KEY,
+  attr1_29 INTEGER NOT NULL,
+  attr2_29 TEXT DEFAULT 'def29',
+  entity28_id INTEGER REFERENCES entity28(id)
+);
+
+CREATE TABLE entity30 (
+  id SERIAL PRIMARY KEY,
+  attr1_30 INTEGER NOT NULL,
+  attr2_30 TEXT DEFAULT 'def30',
+  entity29_id INTEGER REFERENCES entity29(id)
+);
+
+CREATE TABLE entity31 (
+  id SERIAL PRIMARY KEY,
+  attr1_31 INTEGER NOT NULL,
+  attr2_31 TEXT DEFAULT 'def31',
+  entity30_id INTEGER REFERENCES entity30(id)
+);
+
+CREATE TABLE entity32 (
+  id SERIAL PRIMARY KEY,
+  attr1_32 INTEGER NOT NULL,
+  attr2_32 TEXT DEFAULT 'def32',
+  entity31_id INTEGER REFERENCES entity31(id)
+);
+
+CREATE TABLE entity33 (
+  id SERIAL PRIMARY KEY,
+  attr1_33 INTEGER NOT NULL,
+  attr2_33 TEXT DEFAULT 'def33',
+  entity32_id INTEGER REFERENCES entity32(id)
+);
+
+CREATE TABLE entity34 (
+  id SERIAL PRIMARY KEY,
+  attr1_34 INTEGER NOT NULL,
+  attr2_34 TEXT DEFAULT 'def34',
+  entity33_id INTEGER REFERENCES entity33(id)
+);
+
+CREATE TABLE entity35 (
+  id SERIAL PRIMARY KEY,
+  attr1_35 INTEGER NOT NULL,
+  attr2_35 TEXT DEFAULT 'def35',
+  entity34_id INTEGER REFERENCES entity34(id)
+);
+
+CREATE TABLE entity36 (
+  id SERIAL PRIMARY KEY,
+  attr1_36 INTEGER NOT NULL,
+  attr2_36 TEXT DEFAULT 'def36',
+  entity35_id INTEGER REFERENCES entity35(id)
+);
+
+CREATE TABLE entity37 (
+  id SERIAL PRIMARY KEY,
+  attr1_37 INTEGER NOT NULL,
+  attr2_37 TEXT DEFAULT 'def37',
+  entity36_id INTEGER REFERENCES entity36(id)
+);
+
+CREATE TABLE entity38 (
+  id SERIAL PRIMARY KEY,
+  attr1_38 INTEGER NOT NULL,
+  attr2_38 TEXT DEFAULT 'def38',
+  entity37_id INTEGER REFERENCES entity37(id)
+);
+
+CREATE TABLE entity39 (
+  id SERIAL PRIMARY KEY,
+  attr1_39 INTEGER NOT NULL,
+  attr2_39 TEXT DEFAULT 'def39',
+  entity38_id INTEGER REFERENCES entity38(id)
+);
+
+CREATE TABLE entity40 (
+  id SERIAL PRIMARY KEY,
+  attr1_40 INTEGER NOT NULL,
+  attr2_40 TEXT DEFAULT 'def40',
+  entity39_id INTEGER REFERENCES entity39(id)
+);
+
+CREATE TABLE entity41 (
+  id SERIAL PRIMARY KEY,
+  attr1_41 INTEGER NOT NULL,
+  attr2_41 TEXT DEFAULT 'def41',
+  entity40_id INTEGER REFERENCES entity40(id)
+);
+
+CREATE TABLE entity42 (
+  id SERIAL PRIMARY KEY,
+  attr1_42 INTEGER NOT NULL,
+  attr2_42 TEXT DEFAULT 'def42',
+  entity41_id INTEGER REFERENCES entity41(id)
+);
+
+CREATE TABLE entity43 (
+  id SERIAL PRIMARY KEY,
+  attr1_43 INTEGER NOT NULL,
+  attr2_43 TEXT DEFAULT 'def43',
+  entity42_id INTEGER REFERENCES entity42(id)
+);
+
+CREATE TABLE entity44 (
+  id SERIAL PRIMARY KEY,
+  attr1_44 INTEGER NOT NULL,
+  attr2_44 TEXT DEFAULT 'def44',
+  entity43_id INTEGER REFERENCES entity43(id)
+);
+
+CREATE TABLE entity45 (
+  id SERIAL PRIMARY KEY,
+  attr1_45 INTEGER NOT NULL,
+  attr2_45 TEXT DEFAULT 'def45',
+  entity44_id INTEGER REFERENCES entity44(id)
+);
+
+CREATE TABLE entity46 (
+  id SERIAL PRIMARY KEY,
+  attr1_46 INTEGER NOT NULL,
+  attr2_46 TEXT DEFAULT 'def46',
+  entity45_id INTEGER REFERENCES entity45(id)
+);
+
+CREATE TABLE entity47 (
+  id SERIAL PRIMARY KEY,
+  attr1_47 INTEGER NOT NULL,
+  attr2_47 TEXT DEFAULT 'def47',
+  entity46_id INTEGER REFERENCES entity46(id)
+);
+
+CREATE TABLE entity48 (
+  id SERIAL PRIMARY KEY,
+  attr1_48 INTEGER NOT NULL,
+  attr2_48 TEXT DEFAULT 'def48',
+  entity47_id INTEGER REFERENCES entity47(id)
+);
+
+CREATE TABLE entity49 (
+  id SERIAL PRIMARY KEY,
+  attr1_49 INTEGER NOT NULL,
+  attr2_49 TEXT DEFAULT 'def49',
+  entity48_id INTEGER REFERENCES entity48(id)
+);
+
+CREATE TABLE entity50 (
+  id SERIAL PRIMARY KEY,
+  attr1_50 INTEGER NOT NULL,
+  attr2_50 TEXT DEFAULT 'def50',
+  entity49_id INTEGER REFERENCES entity49(id)
+);
+
+CREATE TABLE entity51 (
+  id SERIAL PRIMARY KEY,
+  entity50_id INTEGER REFERENCES entity50(id)
+);

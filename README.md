@@ -83,8 +83,8 @@ console.log(sql);
 See `examples/` directory for sample schemas and generated outputs.
 
 ## Contributing
-Follow code style in `CONTRIBUTING.md`.  
-Submit pull requests against `main` branch.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed contribution guidelines.  
+Submit pull requests against the `main` branch.
 
 ## Roadmap
 Please start a new branch for each phase or feature (e.g., `phase-2/schema-parser`) before beginning work.  

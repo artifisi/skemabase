@@ -1,0 +1,3 @@
+User has attributes: username unique, email unique, created_at:timestamp default now()
+Tweet has attributes: content not null, created_at:timestamp default now()
+User has many Tweet

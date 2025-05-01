@@ -1,0 +1,54 @@
+[
+  {
+    "entity": "User",
+    "attributes": [
+      {
+        "name": "username",
+        "type": null,
+        "unique": true,
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "email",
+        "type": null,
+        "unique": true,
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp",
+        "unique": false,
+        "nullable": true,
+        "default": "now()"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Tweet"
+      }
+    ]
+  },
+  {
+    "entity": "Tweet",
+    "attributes": [
+      {
+        "name": "content",
+        "type": null,
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp",
+        "unique": false,
+        "nullable": true,
+        "default": "now()"
+      }
+    ],
+    "relationships": []
+  }
+]
