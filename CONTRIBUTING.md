@@ -28,6 +28,13 @@ including bug reports, feature requests, documentation improvements, and code en
 
 ## Reporting Issues
 If you encounter a bug or unexpected behavior, please open an issue with:
+## Release Process
+1. Bump version in `package.json` following Semantic Versioning principles.
+2. Update `CHANGELOG.md` under the "Unreleased" section with new changes.
+3. Commit the version bump and changelog update.
+4. Create a Git tag for the new version (e.g., `v0.1.1`).
+5. Push changes and tags to GitHub: `git push --follow-tags`.
+6. Optionally publish packages to npm and update CLI installation.
 - A minimal reproduction case or example schema.
 - The exact error message and stack trace (if any).
 - Your environment details (OS, Node.js version).

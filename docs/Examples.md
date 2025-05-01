@@ -28,4 +28,7 @@ The `examples/` directory contains sample schemas and the corresponding generate
 - `supercomplex.ir.json`: Parsed JSON IR for the supercomplex schema.
 - `supercomplex.sql`: SQL DDL generated from the supercomplex schema.
 
+## live demo
+- `live/index.html`: Interactive web demo where you can edit a SkemaBase schema and see the IR and SQL in real time.
+
 You can use these examples as a starting point or reference for your own schemas.
