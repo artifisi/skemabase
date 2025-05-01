@@ -34,10 +34,11 @@ ORM migrations, and diagrams.
 
 
 ## Phase 5: Command-Line Interface
-- [ ] Scaffold CLI package (Node.js)
-- [ ] Implement `skemabase parse <file> --output <json>`
-- [ ] Implement `skemabase generate` subcommands (sql, orm, diagram)
-- [ ] Add help, version, and error handling
+- [x] Scaffold CLI package (Node.js)
+- [x] Implement `skemabase parse <file> --output <json>`
+- [x] Implement `skemabase generate sql <file> --dialect <dialect> --output <sql>`
+- [x] Add help (`--help`, `-h`) and version (`--version`, `-v`) flags
+- [ ] Improve error handling (exit codes, messages)
 - [ ] Publish CLI to npm
 
 ## Phase 6: SDKs & Language Bindings

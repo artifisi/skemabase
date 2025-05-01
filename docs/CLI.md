@@ -9,7 +9,11 @@
  
  ## Commands
  
- ### parse
+## Global Options
+- `--help`, `-h`    Show help message
+- `--version`, `-v` Show CLI version
+
+### parse
  Parse a plain-English schema file into JSON IR.
  
  Usage:

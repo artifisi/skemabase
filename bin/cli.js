@@ -9,14 +9,26 @@ function printUsage() {
     'Usage:' +
     '\n  skemabase parse <input.sb> --output <output.json>' +
     '\n  skemabase generate sql <input.sb> --dialect <dialect> --output <output.sql>' +
-    '\nOptions:' +
-    '\n  --output, -o   Output file path (defaults to stdout)' +
-    '\n  --dialect, -d  SQL dialect (postgresql|sqlite)' 
+    '\n\nOptions:' +
+    '\n  --help, -h      Show help message' +
+    '\n  --version, -v   Show version' +
+    '\n  --output, -o    Output file path (defaults to stdout)' +
+    '\n  --dialect, -d   SQL dialect (postgresql|sqlite)' 
   );
   process.exit(1);
 }
 
 const args = process.argv.slice(2);
+// Handle version flag
+if (args.includes('--version') || args.includes('-v')) {
+  try {
+    const pkg = require(path.join(__dirname, '..', 'package.json'));
+    console.log(pkg.version);
+  } catch {
+    console.log('Version not available');
+  }
+  process.exit(0);
+}
 if (args.length === 0 || args.includes('--help') || args.includes('-h')) {
   printUsage();
 }
