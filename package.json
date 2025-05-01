@@ -1,6 +1,31 @@
 {
   "name": "skemabase-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "description": "Command-line interface for parsing plain-English database schemas and generating SQL or JSON IR.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/artifisi/skemabase.git"
+  },
+  "bugs": {
+    "url": "https://github.com/artifisi/skemabase/issues"
+  },
+  "homepage": "https://github.com/artifisi/skemabase",
+  "author": "Artifisi <skemabase@artifisi.com>",
+  "license": "MIT",
+  "keywords": [
+    "database",
+    "schema",
+    "DSL",
+    "SQL",
+    "ORM",
+    "CLI",
+    "IR",
+    "skemabase",
+    "javascript"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "jest"
   },
@@ -11,6 +36,6 @@
     "skemabase": "./bin/cli.js"
   },
   "dependencies": {
-    "skemabase-js": "file:./skemabase-js"
+    "skemabase-js": "^0.1.1"
   }
 }

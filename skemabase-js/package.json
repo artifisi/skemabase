@@ -1,6 +1,31 @@
 {
   "name": "skemabase-js",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "description": "JavaScript SDK for parsing plain-English database schemas into a JSON intermediate representation and generating SQL DDL.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/artifisi/skemabase.git"
+  },
+  "bugs": {
+    "url": "https://github.com/artifisi/skemabase/issues"
+  },
+  "homepage": "https://github.com/artifisi/skemabase",
+  "author": "Artifisi <skemabase@artifisi.com>",
+  "license": "MIT",
+  "keywords": [
+    "database",
+    "schema",
+    "DSL",
+    "SQL",
+    "ORM",
+    "CLI",
+    "IR",
+    "skemabase",
+    "javascript"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "src/index.js",
   "scripts": {
     "test": "jest --coverage",
