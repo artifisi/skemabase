@@ -104,5 +104,8 @@ See [CLI Reference](docs/CLI.md) for full usage of the `skemabase` command-line 
 ## License
 MIT License.  
 See `LICENSE` for details.
+## Versioning
+This project follows [Semantic Versioning](https://semver.org/).
+For the changelog, see [CHANGELOG.md](CHANGELOG.md).
 ```
 
