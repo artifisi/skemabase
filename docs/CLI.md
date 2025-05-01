@@ -41,3 +41,4 @@
  ```bash
  skemabase generate sql schema.sb --dialect sqlite --output schema.sql
  ```
+ Supports relationships defined in the schema (has_many, has_one, belongs_to, has and belongs to many).

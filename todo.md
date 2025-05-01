@@ -27,10 +27,10 @@ ORM migrations, and diagrams.
 - [x] Integrate `generate sql` command in CLI
 
 ## Phase 4: Relationships & Constraints
-- [ ] Extend IR to represent relationships (1:1, 1:N, N:M)
-- [ ] Emit foreign keys, join tables, and constraints in SQL
-- [ ] Support unique, not null, default value annotations
-- [ ] Write integration tests for relational scenarios
+- [x] Extend IR to represent relationships (1:1, 1:N, N:M)
+- [x] Emit foreign keys, join tables, and constraints in SQL
+- [x] Support unique, not null, default value annotations
+- [x] Write integration tests for relational scenarios
 
 ## Phase 5: ORM Migration Templates
 - [ ] Rails ActiveRecord migration template
