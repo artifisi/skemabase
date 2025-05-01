@@ -47,7 +47,7 @@ ORM migrations, and diagrams.
 - [x] Create CONTRIBUTING.md and style guide
 
 ## Phase 7: Releases & Maintenance
-- [ ] Adopt semantic versioning (SemVer)
-- [ ] Create CHANGELOG.md and release process
+- [x] Adopt semantic versioning (SemVer)
+- [x] Create CHANGELOG.md and release process
 - [ ] Plan feature roadmap and backlog grooming
 - [ ] Solicit community feedback and contributions
