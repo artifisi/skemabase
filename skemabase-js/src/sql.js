@@ -9,6 +9,14 @@ function toSnakeCase(name) {
     .toLowerCase();
 }
 
+/**
+ * Generate SQL DDL statements from SkemaBase IR.
+ * @param {Array<Object>} ir - JSON IR of entities (from parse()).
+ * @param {Object} [options] - Generation options.
+ * @param {string} [options.dialect='postgresql'] - SQL dialect: 'postgresql' or 'sqlite'.
+ * @returns {string} SQL DDL statements.
+ * @throws {Error} If an unsupported dialect is specified.
+ */
 function generateSQL(ir, options = {}) {
   const dialect = options.dialect || 'postgresql';
   const statements = [];

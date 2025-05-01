@@ -92,7 +92,9 @@ Refer to `todo.md` for the current status of Phase 2 and beyond.
 3. IR Conversion (src/astToIR.js): aggregates AST statements into the JSON Intermediate Representation (IR) used by downstream SQL/ORM generators.
 
 For large schemas, consider tuning or streaming parsing and optimizing the IR converter to minimize memory churn and lookups.
-
+ 
+## CLI Reference
+See [CLI Reference](docs/CLI.md) for full usage of the `skemabase` command-line tool.
 ## License
 MIT License.  
 See `LICENSE` for details.
