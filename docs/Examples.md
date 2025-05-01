@@ -12,4 +12,9 @@ The `examples/` directory contains sample schemas and the corresponding generate
 - `full.ir.json`: Parsed JSON IR for the full schema.
 - `full.sql`: SQL DDL generated from the IR.
 
+## twitter
+- `twitter.sb`: Twitter-like schema defining Users and Tweets with a one-to-many relationship.
+- `twitter.ir.json`: Parsed JSON IR for the Twitter schema.
+- `twitter.sql`: SQL DDL generated from the Twitter schema.
+
 You can use these examples as a starting point or reference for your own schemas.
