@@ -1,26 +1,35 @@
-name: Publish
+name: Publish skemabase-js to npm
 
 on:
+  # Trigger on version tags (e.g., v1.2.3)
   push:
-    # Publish when a version tag is pushed (e.g. v1.2.3)
     tags:
-      - 'v*'
+      - 'v*.*.*'
+  # Allow manual runs
+  workflow_dispatch:
 
 jobs:
   publish:
+    name: Publish skemabase-js
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: skemabase-js
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js and authenticate to npm registry
+        uses: actions/setup-node@v3
         with:
           node-version: '16'
           registry-url: 'https://registry.npmjs.org'
-      - run: npm ci
-      - run: npm test
-      - run: npm run lint
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          always-auth: true
+          auth-token: ${{ secrets.NPM_TOKEN }}
+
+      - name: Install dependencies and run tests
+        working-directory: skemabase-js
+        run: |
+          npm ci
+          npm test
+
+      - name: Publish to npm
+        working-directory: skemabase-js
+        run: npm publish
