@@ -17,4 +17,9 @@ The `examples/` directory contains sample schemas and the corresponding generate
 - `twitter.ir.json`: Parsed JSON IR for the Twitter schema.
 - `twitter.sql`: SQL DDL generated from the Twitter schema.
 
+## facebook
+- `facebook.sb`: Facebook-like schema with users, profiles, groups, posts, comments, and likes.
+- `facebook.ir.json`: Parsed JSON IR for the Facebook schema.
+- `facebook.sql`: SQL DDL generated from the Facebook schema.
+
 You can use these examples as a starting point or reference for your own schemas.

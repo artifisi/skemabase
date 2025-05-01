@@ -1,0 +1,13 @@
+User has attributes: name, email unique, joined_at:timestamp default now()
+Profile has attributes: bio, avatar_url
+User has one Profile
+Group has attributes: name unique, created_at:timestamp default now()
+User has and belongs to many Group
+Post has attributes: content not null, posted_at:timestamp default now()
+Post belongs to User
+Comment has attributes: body not null, commented_at:timestamp default now()
+Comment belongs to User
+Comment belongs to Post
+Like has attributes: liked_at:timestamp default now()
+Like belongs to User
+Like belongs to Post
