@@ -61,6 +61,11 @@ skemabase parse schema.sb --output schema.json
 ```bash
 skemabase generate sql schema.sb --dialect postgresql --output schema.sql
 ```
+### Version
+```bash
+$ skemabase --version
+0.1.0
+```
 Supports relationships defined in the schema (has_many, has_one, belongs_to, has and belongs to many).
 
 ### Use JavaScript

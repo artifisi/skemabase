@@ -32,21 +32,15 @@ ORM migrations, and diagrams.
 - [x] Support unique, not null, default value annotations
 - [x] Write integration tests for relational scenarios
 
-## Phase 5: ORM Migration Templates
-- [ ] Rails ActiveRecord migration template
-- [ ] Django migrations template
-- [ ] SQLAlchemy/Alembic migration template
-- [ ] Sample migration outputs in `examples/`
-- [ ] Tests for ORM template correctness
 
-## Phase 6: Command-Line Interface
-- [ ] Scaffold CLI package (Node.js)
-- [ ] Implement `skemabase parse <file> --output <json>`
-- [ ] Implement `skemabase generate` subcommands (sql, orm, diagram)
-- [ ] Add help, version, and error handling
-- [ ] Publish CLI to npm
+## Phase 5: Command-Line Interface
+- [x] Scaffold CLI package (Node.js)
+- [x] Implement `skemabase parse <file> --output <json>`
+- [x] Implement `skemabase generate sql <file> --dialect <dialect> --output <sql>`
+- [x] Add help (`--help`, `-h`) and version (`--version`, `-v`) flags
+- [x] Improve error handling (exit codes, messages)
 
-## Phase 7: SDKs & Language Bindings
+## Phase 6: SDKs & Language Bindings
 ### JavaScript SDK
 - [ ] Initialize `skemabase-js` package
 - [ ] Expose `parse()`, `generateSQL()`, `generateORM()`, `generateDiagram()` APIs
@@ -54,19 +48,19 @@ ORM migrations, and diagrams.
 - [ ] Publish to npm
 
 
-## Phase 8: Diagram Generation
+## Phase 7: Diagram Generation
 - [ ] Implement IR-to-Graphviz DOT generator
 - [ ] Integrate `--diagram` flag in CLI and SDKs
 - [ ] Create example ER diagrams in `examples/`
 - [ ] Write tests for DOT output
 
-## Phase 9: Examples, Docs & Tutorials
+## Phase 8: Examples, Docs & Tutorials
 - [ ] Populate `examples/` with schema files and generated artifacts
 - [ ] Update README with quickstart and detailed usage
 - [ ] Write comprehensive documentation (user guide, API reference)
 - [ ] Create CONTRIBUTING.md and style guide
 
-## Phase 10: Releases & Maintenance
+## Phase 9: Releases & Maintenance
 - [ ] Adopt semantic versioning (SemVer)
 - [ ] Create CHANGELOG.md and release process
 - [ ] Plan feature roadmap and backlog grooming
