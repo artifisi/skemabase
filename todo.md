@@ -20,10 +20,10 @@ ORM migrations, and diagrams.
 - [x] Write unit tests for parsing and IR generation
 
 ## Phase 3: SQL Generation (MVP)
-- [ ] Design mapping from IR to SQL DDL constructs
-- [ ] Implement SQL generator for PostgreSQL
-- [ ] Add support for SQLite
-- [ ] Create SQL generator tests (round-trip IR → SQL → IR)
+- [x] Design mapping from IR to SQL DDL constructs
+- [x] Implement SQL generator for PostgreSQL
+- [x] Add support for SQLite
+- [x] Create SQL generator tests (round-trip IR → SQL → IR)
 - [x] Integrate `generate sql` command in CLI
 
 ## Phase 4: Relationships & Constraints
