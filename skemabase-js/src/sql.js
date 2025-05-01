@@ -51,6 +51,22 @@ function generateSQL(ir, options = {}) {
     tables.set(entity.entity, { tableName, columns: cols });
   }
 
+  // Pre-allocate any referenced target-only entities so SQL generation can add FKs
+  for (const entity of ir) {
+    for (const rel of entity.relationships) {
+      const tgtName = rel.target;
+      if (!tables.has(tgtName)) {
+        const tableName = toSnakeCase(tgtName);
+        const cols = [];
+        if (dialect === 'postgresql') {
+          cols.push('id SERIAL PRIMARY KEY');
+        } else if (dialect === 'sqlite') {
+          cols.push('id INTEGER PRIMARY KEY');
+        }
+        tables.set(tgtName, { tableName, columns: cols });
+      }
+    }
+  }
   // Process relationships: foreign keys and join tables
   const addedFK = new Set();
   const joinKeys = new Set();
