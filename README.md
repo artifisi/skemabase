@@ -10,9 +10,7 @@ Parse skemabase into JSON IR, SQL DDL, ORM migrations, and diagrams.
 - Optional type annotations, nullability, defaults, unique keys  
 - One-to-one, one-to-many, many-to-many relationships  
 - JSON intermediate representation  
-- SQL DDL generation for PostgreSQL, MySQL, SQLite  
-- ORM migration templates (Rails, Django, SQLAlchemy)  
-- Graphviz DOT diagram output  
+- SQL DDL generation for PostgreSQL and SQLite  
 - CLI and JavaScript SDKs  
 
 ## Syntax
@@ -61,6 +59,7 @@ skemabase parse schema.sb --output schema.json
 ```bash
 skemabase generate sql schema.sb --dialect postgresql --output schema.sql
 ```
+Supports relationships (belongs_to, has_many, has_one, habtm) and constraints.
 ### Version
 ```bash
 $ skemabase --version
@@ -80,7 +79,7 @@ console.log(sql);
 ```
 
 ## Examples
-See `examples/` directory for sample schemas and generated outputs.
+See `docs/Examples.md` or the `examples/` directory for sample schemas and generated outputs.
 
 ## Contributing
 See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed contribution guidelines.  
