@@ -1,62 +1,29 @@
-SkemaBase Project Instructions
+Agent Instructions for SkemaBase
 
-Description:
-- Define database schemas using plain English.
-- Generate JSON IR, SQL DDL (PostgreSQL, MySQL, SQLite), ORM migrations, and ER diagrams.
+This file contains guidance for the agent when working on the SkemaBase codebase.
+End-user documentation (syntax, grammar, usage examples) resides in README.md and docs/CLI.md.
 
-Syntax:
-  <Entity> has attributes: <name>[:<type>] [unique] [not null] [default <expr>], …
-  <Entity> has many <Target>
-  <Entity> has one <Target>
-  <Entity> belongs to <Target>
-  <Entity> has and belongs to many <Target>
+Key locations:
+- skemabase-js/src: source modules (tokenizer, parser, astToIR, sql, index)
+- skemabase-js/tests: Jest unit tests
+- bin/cli.js: command-line integration
 
-BNF Grammar:
-```
-<Schema>       ::= <Statement>*
-<Statement>    ::= <EntityDecl> | <AttrDecl> | <RelDecl>
-<EntityDecl>   ::= <Identifier>
-<AttrDecl>     ::= <Identifier> "has attributes:" <AttrList>
-<AttrList>     ::= <Attr> ("," <Attr>)*
-<Attr>         ::= <Name> [":" <Type>] ["unique"] ["not null"] ["default" <Expr>]
-<RelDecl>      ::= <Identifier> <RelType> <IdentifierList>
-<RelType>      ::= "has many" | "has one" | "belongs to" | "has and belongs to many"
-<IdentifierList> ::= <Identifier> ("," <Identifier>)*
-```
+Developer workflow:
+- Create a new branch per feature or phase
+- Use `apply_patch` to modify files; keep changes minimal and focused
+- Write red–green tests (Jest) before implementation; aim for high coverage
+- Add JSDoc comments for any new public API
+- Update README.md and docs/ with user-facing changes (CLI flags, examples)
+- Run `cd skemabase-js && npm install && npm test && npm run lint` to validate
+- After implementation:
+  • Remove debug code and inline comments
+  • Ensure pre-commit checks pass
+  • Commit with clear message, push branch, and open a PR (`gh pr create`)
 
-Project Structure:
-- examples/     Sample schemas (.sb), IR (.ir.json), and SQL (.sql).
-- skemabase-js/ JavaScript SDK
-  - src/tokenizer.js   Lexical analysis
-  - src/parser.js      AST generation
-  - src/astToIR.js     IR conversion
-  - tests/             Unit tests (Jest)
-- todo.md        Phase-by-phase roadmap
-- README.md      Usage, quickstart, and developer docs
+Coding guidelines:
+- Fix root causes, avoid quick hacks
+- Keep code style consistent with the existing codebase
+- Document any new behavior or flags
+- Add tests for edge cases and error handling
 
-Development Commands:
-- cd skemabase-js && npm install && npm test   Run SDK tests
-- skemabase parse <file.sb> --output <file.json>
-- skemabase generate sql <file.sb> --dialect postgresql --output <file.sql>
-
-Coding Guidelines:
-- Fix issues at the root cause; avoid quick patches.
-- Keep changes minimal and focused on the user’s request.
-- Update documentation (README.md, todo.md) as needed.
-- Use `apply_patch` for file edits and ensure pre-commit checks pass.
-- Run existing tests; add new tests for new functionality.
-- Always create a new branch for each phase before starting work.
-- Follow red–green development: write failing tests first, then implementation until tests pass.
-- After completing a feature or phase, update todo.md to reflect its new status.
-
-Roadmap Phases (see todo.md):
-- Phase 1: Testing & CI/CD (complete)
-- Phase 2: Core Parsing & IR (complete)
-- Phase 3: SQL Generation (MVP)
-  - Design mapping IR → SQL DDL constructs
-  - Implement SQL generator for PostgreSQL (red–green development)
-  - Add support for SQLite
-  - Create SQL generator tests (IR → SQL → IR)
-  - Integrate `generate sql` command in CLI and expose `generateSQL` in the SDK
-- Phase 4: Relationships & Constraints
-- Phase 5+: ORM templates, CLI polish, diagram generation, documentation
+Use this file as the agent’s cheat sheet; defer all user-facing details to the official docs.
