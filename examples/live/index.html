@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SkemaBase Live Demo</n+  <style>
+    body { margin: 0; display: flex; height: 100vh; font-family: sans-serif; }
+    #input { width: 50%; padding: 10px; box-sizing: border-box; border: none; border-right: 1px solid #ccc; resize: none; font-family: monospace; font-size: 14px; }
+    #outputs { flex: 1; display: flex; flex-direction: column; }
+    #ir, #sql { flex: 1; padding: 10px; margin: 0; overflow: auto; font-family: monospace; font-size: 14px; }
+    #ir { border-bottom: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+  <textarea id="input" placeholder="Type your SkemaBase schema here..."></textarea>
+  <div id="outputs">
+    <pre id="ir">IR will appear here</pre>
+    <pre id="sql">SQL will appear here</pre>
+  </div>
+  <script type="module">
+    import { parse, generateSQL } from '../../skemabase-js/src/index.js';
+    const input = document.getElementById('input');
+    const irEl = document.getElementById('ir');
+    const sqlEl = document.getElementById('sql');
+    function update() {
+      const text = input.value;
+      try {
+        const ir = parse(text);
+        irEl.textContent = JSON.stringify(ir, null, 2);
+        const sql = generateSQL(ir, { dialect: 'postgresql' });
+        sqlEl.textContent = sql;
+      } catch (e) {
+        irEl.textContent = 'Error: ' + e.message;
+        sqlEl.textContent = '';
+      }
+    }
+    input.addEventListener('input', update);
+    // Set initial example
+    input.value = 'User has attributes: name, email unique\nUser has many posts';
+    update();
+  </script>
+</body>
+</html>
