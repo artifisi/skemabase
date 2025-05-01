@@ -40,28 +40,14 @@ ORM migrations, and diagrams.
 - [x] Add help (`--help`, `-h`) and version (`--version`, `-v`) flags
 - [x] Improve error handling (exit codes, messages)
 
-## Phase 6: SDKs & Language Bindings
-### JavaScript SDK
-- [ ] Initialize `skemabase-js` package
-- [ ] Expose `parse()`, `generateSQL()`, `generateORM()`, `generateDiagram()` APIs
-- [ ] Write usage examples and tests
-- [ ] Publish to npm
-
-
-## Phase 7: Diagram Generation
-- [ ] Implement IR-to-Graphviz DOT generator
-- [ ] Integrate `--diagram` flag in CLI and SDKs
-- [ ] Create example ER diagrams in `examples/`
-- [ ] Write tests for DOT output
-
-## Phase 8: Examples, Docs & Tutorials
+## Phase 6: Examples, Docs & Tutorials
 - [ ] Populate `examples/` with schema files and generated artifacts
 - [ ] Update README with quickstart and detailed usage
 - [ ] Write comprehensive documentation (user guide, API reference)
 - [ ] Create CONTRIBUTING.md and style guide
 
-## Phase 9: Releases & Maintenance
+## Phase 7: Releases & Maintenance
 - [ ] Adopt semantic versioning (SemVer)
 - [ ] Create CHANGELOG.md and release process
 - [ ] Plan feature roadmap and backlog grooming
-- [ ] Solicit community feedback and contributionsle
+- [ ] Solicit community feedback and contributions
