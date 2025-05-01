@@ -10,8 +10,14 @@
  ## Commands
  
 ## Global Options
-- `--help`, `-h`    Show help message
-- `--version`, `-v` Show CLI version
+-- `--help`, `-h`    Show help message
+-- `--version`, `-v` Show CLI version
+
+Example:
+```bash
+$ skemabase --version
+0.1.0
+```
 
 ### parse
  Parse a plain-English schema file into JSON IR.
