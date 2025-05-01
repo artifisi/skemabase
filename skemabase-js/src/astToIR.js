@@ -7,6 +7,16 @@ function astToIR(statements) {
       entities.set(stmt.entity, { entity: stmt.entity, attributes: [], relationships: [] });
     }
   }
+  // Ensure target-only entities (from relationships) are also pre-allocated
+  for (const stmt of statements) {
+    if (stmt.type === 'RelDecl') {
+      for (const target of stmt.targets) {
+        if (!entities.has(target)) {
+          entities.set(target, { entity: target, attributes: [], relationships: [] });
+        }
+      }
+    }
+  }
   // Populate attributes and relationships
   for (const stmt of statements) {
     const decl = entities.get(stmt.entity);

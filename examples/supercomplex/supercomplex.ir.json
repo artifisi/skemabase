@@ -1,0 +1,1252 @@
+[
+  {
+    "entity": "Entity01",
+    "attributes": [
+      {
+        "name": "attr1_01",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_01",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def01'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity02"
+      }
+    ]
+  },
+  {
+    "entity": "Entity02",
+    "attributes": [
+      {
+        "name": "attr1_02",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_02",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def02'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity03"
+      }
+    ]
+  },
+  {
+    "entity": "Entity03",
+    "attributes": [
+      {
+        "name": "attr1_03",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_03",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def03'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity04"
+      }
+    ]
+  },
+  {
+    "entity": "Entity04",
+    "attributes": [
+      {
+        "name": "attr1_04",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_04",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def04'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity05"
+      }
+    ]
+  },
+  {
+    "entity": "Entity05",
+    "attributes": [
+      {
+        "name": "attr1_05",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_05",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def05'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity06"
+      }
+    ]
+  },
+  {
+    "entity": "Entity06",
+    "attributes": [
+      {
+        "name": "attr1_06",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_06",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def06'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity07"
+      }
+    ]
+  },
+  {
+    "entity": "Entity07",
+    "attributes": [
+      {
+        "name": "attr1_07",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_07",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def07'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity08"
+      }
+    ]
+  },
+  {
+    "entity": "Entity08",
+    "attributes": [
+      {
+        "name": "attr1_08",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_08",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def08'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity09"
+      }
+    ]
+  },
+  {
+    "entity": "Entity09",
+    "attributes": [
+      {
+        "name": "attr1_09",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_09",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def09'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity10"
+      }
+    ]
+  },
+  {
+    "entity": "Entity10",
+    "attributes": [
+      {
+        "name": "attr1_10",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_10",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def10'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity11"
+      }
+    ]
+  },
+  {
+    "entity": "Entity11",
+    "attributes": [
+      {
+        "name": "attr1_11",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_11",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def11'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity12"
+      }
+    ]
+  },
+  {
+    "entity": "Entity12",
+    "attributes": [
+      {
+        "name": "attr1_12",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_12",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def12'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity13"
+      }
+    ]
+  },
+  {
+    "entity": "Entity13",
+    "attributes": [
+      {
+        "name": "attr1_13",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_13",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def13'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity14"
+      }
+    ]
+  },
+  {
+    "entity": "Entity14",
+    "attributes": [
+      {
+        "name": "attr1_14",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_14",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def14'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity15"
+      }
+    ]
+  },
+  {
+    "entity": "Entity15",
+    "attributes": [
+      {
+        "name": "attr1_15",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_15",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def15'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity16"
+      }
+    ]
+  },
+  {
+    "entity": "Entity16",
+    "attributes": [
+      {
+        "name": "attr1_16",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_16",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def16'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity17"
+      }
+    ]
+  },
+  {
+    "entity": "Entity17",
+    "attributes": [
+      {
+        "name": "attr1_17",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_17",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def17'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity18"
+      }
+    ]
+  },
+  {
+    "entity": "Entity18",
+    "attributes": [
+      {
+        "name": "attr1_18",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_18",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def18'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity19"
+      }
+    ]
+  },
+  {
+    "entity": "Entity19",
+    "attributes": [
+      {
+        "name": "attr1_19",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_19",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def19'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity20"
+      }
+    ]
+  },
+  {
+    "entity": "Entity20",
+    "attributes": [
+      {
+        "name": "attr1_20",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_20",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def20'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity21"
+      }
+    ]
+  },
+  {
+    "entity": "Entity21",
+    "attributes": [
+      {
+        "name": "attr1_21",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_21",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def21'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity22"
+      }
+    ]
+  },
+  {
+    "entity": "Entity22",
+    "attributes": [
+      {
+        "name": "attr1_22",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_22",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def22'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity23"
+      }
+    ]
+  },
+  {
+    "entity": "Entity23",
+    "attributes": [
+      {
+        "name": "attr1_23",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_23",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def23'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity24"
+      }
+    ]
+  },
+  {
+    "entity": "Entity24",
+    "attributes": [
+      {
+        "name": "attr1_24",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_24",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def24'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity25"
+      }
+    ]
+  },
+  {
+    "entity": "Entity25",
+    "attributes": [
+      {
+        "name": "attr1_25",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_25",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def25'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity26"
+      }
+    ]
+  },
+  {
+    "entity": "Entity26",
+    "attributes": [
+      {
+        "name": "attr1_26",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_26",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def26'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity27"
+      }
+    ]
+  },
+  {
+    "entity": "Entity27",
+    "attributes": [
+      {
+        "name": "attr1_27",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_27",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def27'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity28"
+      }
+    ]
+  },
+  {
+    "entity": "Entity28",
+    "attributes": [
+      {
+        "name": "attr1_28",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_28",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def28'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity29"
+      }
+    ]
+  },
+  {
+    "entity": "Entity29",
+    "attributes": [
+      {
+        "name": "attr1_29",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_29",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def29'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity30"
+      }
+    ]
+  },
+  {
+    "entity": "Entity30",
+    "attributes": [
+      {
+        "name": "attr1_30",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_30",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def30'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity31"
+      }
+    ]
+  },
+  {
+    "entity": "Entity31",
+    "attributes": [
+      {
+        "name": "attr1_31",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_31",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def31'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity32"
+      }
+    ]
+  },
+  {
+    "entity": "Entity32",
+    "attributes": [
+      {
+        "name": "attr1_32",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_32",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def32'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity33"
+      }
+    ]
+  },
+  {
+    "entity": "Entity33",
+    "attributes": [
+      {
+        "name": "attr1_33",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_33",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def33'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity34"
+      }
+    ]
+  },
+  {
+    "entity": "Entity34",
+    "attributes": [
+      {
+        "name": "attr1_34",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_34",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def34'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity35"
+      }
+    ]
+  },
+  {
+    "entity": "Entity35",
+    "attributes": [
+      {
+        "name": "attr1_35",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_35",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def35'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity36"
+      }
+    ]
+  },
+  {
+    "entity": "Entity36",
+    "attributes": [
+      {
+        "name": "attr1_36",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_36",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def36'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity37"
+      }
+    ]
+  },
+  {
+    "entity": "Entity37",
+    "attributes": [
+      {
+        "name": "attr1_37",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_37",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def37'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity38"
+      }
+    ]
+  },
+  {
+    "entity": "Entity38",
+    "attributes": [
+      {
+        "name": "attr1_38",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_38",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def38'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity39"
+      }
+    ]
+  },
+  {
+    "entity": "Entity39",
+    "attributes": [
+      {
+        "name": "attr1_39",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_39",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def39'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity40"
+      }
+    ]
+  },
+  {
+    "entity": "Entity40",
+    "attributes": [
+      {
+        "name": "attr1_40",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_40",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def40'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity41"
+      }
+    ]
+  },
+  {
+    "entity": "Entity41",
+    "attributes": [
+      {
+        "name": "attr1_41",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_41",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def41'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity42"
+      }
+    ]
+  },
+  {
+    "entity": "Entity42",
+    "attributes": [
+      {
+        "name": "attr1_42",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_42",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def42'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity43"
+      }
+    ]
+  },
+  {
+    "entity": "Entity43",
+    "attributes": [
+      {
+        "name": "attr1_43",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_43",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def43'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity44"
+      }
+    ]
+  },
+  {
+    "entity": "Entity44",
+    "attributes": [
+      {
+        "name": "attr1_44",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_44",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def44'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity45"
+      }
+    ]
+  },
+  {
+    "entity": "Entity45",
+    "attributes": [
+      {
+        "name": "attr1_45",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_45",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def45'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity46"
+      }
+    ]
+  },
+  {
+    "entity": "Entity46",
+    "attributes": [
+      {
+        "name": "attr1_46",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_46",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def46'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity47"
+      }
+    ]
+  },
+  {
+    "entity": "Entity47",
+    "attributes": [
+      {
+        "name": "attr1_47",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_47",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def47'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity48"
+      }
+    ]
+  },
+  {
+    "entity": "Entity48",
+    "attributes": [
+      {
+        "name": "attr1_48",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_48",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def48'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity49"
+      }
+    ]
+  },
+  {
+    "entity": "Entity49",
+    "attributes": [
+      {
+        "name": "attr1_49",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_49",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def49'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity50"
+      }
+    ]
+  },
+  {
+    "entity": "Entity50",
+    "attributes": [
+      {
+        "name": "attr1_50",
+        "type": "integer",
+        "unique": false,
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attr2_50",
+        "type": "text",
+        "unique": false,
+        "nullable": true,
+        "default": "'def50'"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "has_many",
+        "target": "Entity51"
+      }
+    ]
+  }
+]
