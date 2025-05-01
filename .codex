@@ -8,7 +8,13 @@ Key locations:
 - skemabase-js/tests: Jest unit tests
 - bin/cli.js: command-line integration
 
-Developer workflow:
+Instructions (IMPORTANT):
+- read README.md and todo.md
+- don't create unnecessary backup files
+- Fix root causes, avoid quick hacks
+- Keep code style consistent with the existing codebase
+- Document any new behavior or flags
+- Add tests for edge cases and error handlingrea
 - Create a new branch per feature or phase
 - Use `apply_patch` to modify files; keep changes minimal and focused
 - Write red–green tests (Jest) before implementation; aim for high coverage
@@ -18,12 +24,8 @@ Developer workflow:
 - After implementation:
   • Remove debug code and inline comments
   • Ensure pre-commit checks pass
-  • Commit with clear message, push branch, and open a PR (`gh pr create`)
+  • Commit with clear message, push branch, and open a PR
 
-Coding guidelines:
-- Fix root causes, avoid quick hacks
-- Keep code style consistent with the existing codebase
-- Document any new behavior or flags
-- Add tests for edge cases and error handling
+
 
 Use this file as the agent’s cheat sheet; defer all user-facing details to the official docs.
