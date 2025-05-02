@@ -1,0 +1,12 @@
+erDiagram
+    User {
+        string username
+        string email
+    }
+    Post {
+        string title
+        string body
+        datetime published_at
+    }
+    User ||--o{ Post : "has many"
+    Post }o--|| User : "belongs to"

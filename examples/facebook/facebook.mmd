@@ -1,0 +1,32 @@
+erDiagram
+    User {
+        string name
+        string email
+        timestamp joined_at
+    }
+    Profile {
+        string bio
+        string avatar_url
+    }
+    Group {
+        string name
+        timestamp created_at
+    }
+    Post {
+        string content
+        timestamp posted_at
+    }
+    Comment {
+        string body
+        timestamp commented_at
+    }
+    Like {
+        timestamp liked_at
+    }
+    User ||--|| Profile : "has one"
+    User }o--o{ Group : "has and belongs to many"
+    Post }o--|| User : "belongs to"
+    Comment }o--|| User : "belongs to"
+    Comment }o--|| Post : "belongs to"
+    Like }o--|| User : "belongs to"
+    Like }o--|| Post : "belongs to"
