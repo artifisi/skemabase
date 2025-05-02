@@ -1,6 +1,6 @@
 {
   "name": "skemabase-js",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "JavaScript SDK for parsing plain-English database schemas into a JSON intermediate representation and generating SQL DDL.",
   "repository": {
     "type": "git",
