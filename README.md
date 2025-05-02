@@ -60,6 +60,19 @@ skemabase parse schema.sb --output schema.json
 skemabase generate sql schema.sb --dialect postgresql --output schema.sql
 ```
 Supports relationships (belongs_to, has_many, has_one, habtm) and constraints.
+
+### Generate Diagram
+```bash
+skemabase generate diagram schema.sb --format mermaid --output schema.mmd
+```
+Generate a Mermaid ER diagram from the schema.
+
+### Generate Diagrams for Examples
+To quickly generate Mermaid ER diagrams for all example schemas, run:
+```bash
+bash scripts/generateExampleDiagrams.sh
+```
+
 ### Version
 ```bash
 $ skemabase --version
@@ -69,13 +82,16 @@ Supports relationships defined in the schema (has_many, has_one, belongs_to, has
 
 ### Use JavaScript
 ```js
-import { parse, generateSQL } from 'skemabase-js';
+import { parse, generateSQL, generateMermaidDiagram } from 'skemabase-js';
 
 const text = `User has attributes: username, email unique
 User has many posts`;
 const ir = parse(text);
 const sql = generateSQL(ir, { dialect: 'postgresql' });
 console.log(sql);
+// Generate Mermaid ER diagram
+const diagram = generateMermaidDiagram(ir);
+console.log(diagram);
 ```
 
 ## Examples

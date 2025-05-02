@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 // Load the SDK directly from the local skemabase-js source to include latest changes
-const { parse, generateSQL } = require(path.join(__dirname, '..', 'skemabase-js', 'src', 'index.js'));
+const { parse, generateSQL, generateMermaidDiagram } = require(path.join(__dirname, '..', 'skemabase-js', 'src', 'index.js'));
 
 /**
  * Print usage help text (to stdout), without exiting.
@@ -110,6 +110,31 @@ if (cmd === 'parse') {
     fs.writeFileSync(output, sql);
   } else {
     console.log(sql);
+  }
+} else if (cmd === 'generate' && args[1] === 'diagram') {
+  const input = args[2];
+  if (!input) printError('Error: Missing input file for generate diagram command.');
+  // Only mermaid format supported
+  let format = 'mermaid';
+  let fIndex = args.indexOf('--format');
+  if (fIndex === -1) fIndex = args.indexOf('-f');
+  if (fIndex !== -1) format = args[fIndex + 1];
+  if (format !== 'mermaid') printError(`Unsupported diagram format: ${format}`);
+  let outIndex = args.indexOf('--output');
+  if (outIndex === -1) outIndex = args.indexOf('-o');
+  const output = outIndex !== -1 ? args[outIndex + 1] : null;
+  // Read and parse schema
+  let text;
+  try { text = fs.readFileSync(input, 'utf-8'); } catch (err) { printError(`Error reading file: ${err.message}`); }
+  let ir;
+  try { ir = parse(text); } catch (err) { printError(`Parse error: ${err.message}`); }
+  // Generate Mermaid diagram
+  let diagram;
+  try { diagram = generateMermaidDiagram(ir); } catch (err) { printError(`Error generating diagram: ${err.message}`); }
+  if (output) {
+    fs.writeFileSync(output, diagram);
+  } else {
+    console.log(diagram);
   }
 } else {
   printError(`Error: Unrecognized command: ${args.join(' ')}`);

@@ -1,0 +1,36 @@
+erDiagram
+    User {
+        string username
+        string email
+        string created_at
+    }
+    Post {
+        string title
+        string body
+        string published_at
+        string status
+    }
+    Comment {
+        string content
+        string created_at
+    }
+    Tag {
+        string name
+    }
+    Role {
+        string name
+    }
+    AuditLog {
+        string change
+        string changed_at
+    }
+    User ||--o{ Post : "has many"
+    User }o--o{ Role : "has and belongs to many"
+    Post }o--|| User : "belongs to"
+    Post ||--o{ Comment : "has many"
+    Post }o--o{ Tag : "has and belongs to many"
+    Comment }o--|| Post : "belongs to"
+    Comment }o--|| User : "belongs to"
+    Tag }o--o{ Post : "has and belongs to many"
+    Role }o--o{ User : "has and belongs to many"
+    AuditLog }o--|| User : "belongs to"

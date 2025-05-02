@@ -1,0 +1,11 @@
+erDiagram
+    User {
+        string username
+        string email
+        timestamp created_at
+    }
+    Tweet {
+        string content
+        timestamp created_at
+    }
+    User ||--o{ Tweet : "has many"

@@ -51,7 +51,24 @@ $ skemabase --version
  ```bash
  skemabase generate sql schema.sb --dialect sqlite --output schema.sql
  ```
-Supports relationships defined in the schema (has_many, has_one, belongs_to, has and belongs to many).
+ Supports relationships defined in the schema (has_many, has_one, belongs_to, has and belongs to many).
+
+### generate diagram
+Generate an ER diagram from a schema file.
+
+Usage:
+```bash
+skemabase generate diagram <input.sb> [--format <format>] [--output <output.file>]
+```
+
+Options:
+- `--format`, `-f`  Diagram format (currently only `mermaid`). Defaults to `mermaid`.
+- `--output`, `-o`  Path to write diagram output. Defaults to stdout.
+
+Example:
+```bash
+skemabase generate diagram schema.sb --format mermaid --output schema.mmd
+```
 
 ## Exit Codes
 - 0: Success (commands executed, or help/version shown)
@@ -65,6 +82,7 @@ Supports relationships defined in the schema (has_many, has_one, belongs_to, has
 | `skemabase generate sql my.sb -d sqlite`       | Generate SQLite DDL                 |
 | `skemabase --version`                          | Show CLI version                    |
 | `skemabase --help`                             | Show usage                          |
+| `skemabase generate diagram my.sb -f mermaid`   | Generate Mermaid ER diagram         |
 
 ## Full Examples
 

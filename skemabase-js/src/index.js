@@ -2,6 +2,7 @@ const { tokenize } = require('./tokenizer');
 const { parseTokensToAST } = require('./parser');
 const { astToIR } = require('./astToIR');
 const { generateSQL } = require('./sql');
+const { generateMermaidDiagram } = require('./diagramMermaid');
 
 /**
  * Parse a SkemaBase schema (plain English) into JSON IR.
@@ -29,4 +30,4 @@ function parse(text) {
   return astToIR(statements);
 }
 
-module.exports = { parse, generateSQL };
+module.exports = { parse, generateSQL, generateMermaidDiagram };
