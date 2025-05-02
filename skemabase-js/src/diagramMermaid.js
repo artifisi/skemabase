@@ -1,10 +1,9 @@
 /**
  * Generate a Mermaid ER diagram from the SkemaBase IR.
  * @param {Array<Object>} ir - JSON IR: list of entities with attributes and relationships.
- * @param {Object} [options] - Generation options (reserved for future use).
  * @returns {string} Mermaid ER diagram string.
  */
-function generateMermaidDiagram(ir, options = {}) {
+function generateMermaidDiagram(ir) {
   const lines = [];
   lines.push('erDiagram');
   // First, entity definitions
