@@ -1,0 +1,2 @@
+User has attributes: id serial, name text, email text
+Post has attributes: id serial, title text

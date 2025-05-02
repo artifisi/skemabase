@@ -60,10 +60,43 @@ skemabase parse schema.sb --output schema.json
 skemabase generate sql schema.sb --dialect postgresql --output schema.sql
 ```
 Supports relationships (belongs_to, has_many, has_one, habtm) and constraints.
+
+### Migrations
+Use reversible migrations to evolve your schema.
+
+Initialize migrations folder, create empty or diff migrations, and preview or rollback migrations:
+```bash
+# Initialize migrations folder
+skemabase migrate init
+
+# Create an empty migration
+skemabase migrate create add_users_table
+
+# Create a diff migration between IR snapshots (or schema files)
+skemabase migrate create add_email --from schema_v1.json --to schema_v2.json
+# or directly from schema files:
+skemabase migrate create add_email --from schema_v1.sb --to schema_v2.sb
+
+# Preview the next migration SQL (dry run)
+skemabase migrate up --dry-run
+
+# Roll back the last two migrations (dry run)
+skemabase migrate down 2 --dry-run
+```
+
+Options:
+- `--from`     Path to old IR JSON file or schema file (for create)
+- `--to`       Path to new IR JSON file or schema file (for create)
+- `--dry-run`  Print SQL without executing
+- `--dialect`, `-d`  SQL dialect (`postgresql`|`sqlite`)
+
+Supports relationships (`belongs_to`, `has_many`, `has_one`, `habtm`) and constraints.
+
+Note: At this time, `migrate up` and `migrate down` only generate SQL and do not execute against a live database.
 ### Version
 ```bash
 $ skemabase --version
-0.1.0
+0.1.1
 ```
 Supports relationships defined in the schema (has_many, has_one, belongs_to, has and belongs to many).
 

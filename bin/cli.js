@@ -12,6 +12,9 @@ function usage() {
     'Usage:' +
     '\n  skemabase parse <input.sb> --output <output.json>' +
     '\n  skemabase generate sql <input.sb> --dialect <dialect> --output <output.sql>' +
+    '\n  skemabase migrate init' +
+    '\n  skemabase migrate create <name> [--from <oldIR.json> --to <newIR.json>]' +
+    '\n  skemabase migrate up|down [<n>] [--dry-run] [--dialect <dialect>]' +
     '\n\nOptions:' +
     '\n  --help, -h      Show help message' +
     '\n  --version, -v   Show version' +
@@ -111,6 +114,100 @@ if (cmd === 'parse') {
   } else {
     console.log(sql);
   }
+} else if (cmd === 'migrate') {
+  const sub = args[1];
+  if (!sub) printError('Error: Missing migrate subcommand (init, create, up, down).');
+  // migrate init
+  if (sub === 'init') {
+    const migrationsDir = path.join(process.cwd(), 'migrations');
+    if (fs.existsSync(migrationsDir)) {
+      console.log('Migrations directory already exists at ./migrations');
+    } else {
+      fs.mkdirSync(migrationsDir);
+      console.log('Created migrations directory at ./migrations');
+    }
+    process.exit(0);
+  }
+  // migrate create
+  if (sub === 'create') {
+    const name = args[2];
+    if (!name) printError('Error: Missing migration name for create.');
+    const fromIdx = args.indexOf('--from');
+    const toIdx = args.indexOf('--to');
+    const { diffSchemas } = require(path.join(__dirname, '..', 'skemabase-js', 'src', 'migration'));
+    let migration;
+    // Load IR from files: support .sb (schema) or .json (IR)
+    let oldIR = [];
+    let newIR = [];
+    try {
+      if (fromIdx !== -1) {
+        const fromPath = args[fromIdx + 1];
+        const data = fs.readFileSync(fromPath, 'utf-8');
+        if (path.extname(fromPath) === '.sb') {
+          oldIR = parse(data);
+        } else {
+          oldIR = JSON.parse(data);
+        }
+      }
+      if (toIdx !== -1) {
+        const toPath = args[toIdx + 1];
+        const data = fs.readFileSync(toPath, 'utf-8');
+        if (path.extname(toPath) === '.sb') {
+          newIR = parse(data);
+        } else {
+          newIR = JSON.parse(data);
+        }
+      }
+    } catch (err) {
+      printError(`Error reading IR files: ${err.message}`);
+    }
+    migration = diffSchemas(oldIR, newIR);
+    const timestamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\..+/, '');
+    const safe = name.replace(/\s+/g, '_').replace(/[^\w\-]/g, '').toLowerCase();
+    const filename = `${timestamp}_${safe}.js`;
+    const migrationsDir = path.join(process.cwd(), 'migrations');
+    if (!fs.existsSync(migrationsDir)) printError('Error: migrations directory not found. Run `skemabase migrate init` first.');
+    const filePath = path.join(migrationsDir, filename);
+    const content = `module.exports = ${JSON.stringify(migration, null, 2)};\n`;
+    fs.writeFileSync(filePath, content);
+    console.log(`Created migration: ${filePath}`);
+    process.exit(0);
+  }
+  // migrate up/down
+  if (sub === 'up' || sub === 'down') {
+    const migrationsDir = path.join(process.cwd(), 'migrations');
+    if (!fs.existsSync(migrationsDir)) printError('Error: migrations directory not found. Run `skemabase migrate init` first.');
+    let count = null;
+    const maybeN = args[2];
+    if (maybeN && !maybeN.startsWith('-')) {
+      const v = parseInt(maybeN, 10);
+      if (Number.isNaN(v)) printError(`Error: Invalid migration count: ${maybeN}`);
+      count = v;
+    }
+    const dryRun = args.includes('--dry-run');
+    let dialect = 'postgresql';
+    let dIdx = args.indexOf('--dialect');
+    if (dIdx === -1) dIdx = args.indexOf('-d');
+    if (dIdx !== -1) dialect = args[dIdx + 1];
+    let files = fs.readdirSync(migrationsDir).filter(f => f.endsWith('.js')).sort();
+    if (sub === 'down') files = files.reverse();
+    if (count != null) files = files.slice(0, count);
+    if (files.length === 0) {
+      console.log('No migrations to process.');
+      process.exit(0);
+    }
+    const { generateMigrationSQL } = require(path.join(__dirname, '..', 'skemabase-js', 'src', 'migration'));
+    for (const file of files) {
+      const migration = require(path.join(process.cwd(), 'migrations', file));
+      const { upSQL, downSQL } = generateMigrationSQL(migration, { dialect });
+      console.log(`-- Migration: ${file}`);
+      console.log(sub === 'up' ? upSQL : downSQL);
+      console.log();
+    }
+    if (!dryRun) console.log('Note: live execution not yet implemented.');
+    process.exit(0);
+  }
+  printError(`Error: Unrecognized migrate subcommand: ${sub}`);
 } else {
   printError(`Error: Unrecognized command: ${args.join(' ')}`);
 }

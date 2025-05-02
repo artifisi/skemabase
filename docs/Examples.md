@@ -32,3 +32,31 @@ The `examples/` directory contains sample schemas and the corresponding generate
 - `live/index.html`: Interactive web demo where you can edit a SkemaBase schema and see the IR and SQL in real time.
 
 You can use these examples as a starting point or reference for your own schemas.
+  
+## migrations
+This folder contains two schema snapshots under `examples/migration`:
+- `first.sb`: Initial schema
+- `second.sb`: Updated schema with an additional `email` attribute
+  
+Generate migrations using the CLI (run inside the `examples/migration` folder):
+```bash
+# Change to the migration examples directory
+cd examples/migration
+
+#! Initial migration from empty schema to first snapshot
+skemabase migrate create initial --to first.sb
+
+#! Diff migration from first snapshot to second snapshot
+skemabase migrate create add_email --from first.sb --to second.sb
+```
+  
+Preview SQL for all migrations (still inside `examples/migration`):
+```bash
+skemabase migrate up --dry-run
+```
+  
+Rollback migrations:
+```bash
+skemabase migrate down 2 --dry-run
+```
+
